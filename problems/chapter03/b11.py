@@ -2,8 +2,8 @@ from typing import List
 
 # 整数x以上となるAの整数のうち、最小値のインデックスを返す
 def search(x: int, A: List[int]) -> bool:
-    l = 0
-    r = len(A) - 1
+    l = -1
+    r = len(A)
 
     while r - l > 1 :
         m = (l + r) // 2
@@ -28,15 +28,9 @@ A.sort()
 
 # 言い換え
 # 配列AにはX_iより小さい要素が何個あるか。
-# -> 配列AのX_i以上の最小値の存在する位置を特定し、その位置の1つ手前+1が要素数となる。
+# -> 配列AのX_i以上の最小値の存在する位置を特定し、要素数を考える。
 min_A = A[0]
 max_A = A[-1]
 for x in X: 
-    if x <= min_A:
-        print(0)
-        continue
-    if x > max_A:
-        print(N)
-        continue
-    idx = search(x = x, A=A)
+    idx = search(x=x, A=A)
     print(idx)
