@@ -14,7 +14,6 @@ def search(a: int, l: int, N: int, K: int) -> int:
             r = m
     return l
 
-# 開始位置の決定
 cnt = 0
 for i in range(N):
     # A[t] <= A[i] + KとなるA[t]を求める
