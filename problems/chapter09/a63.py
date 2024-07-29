@@ -13,7 +13,7 @@ def bfs() -> List[int]:
     queue = deque([0])
     dist[0] = 0
     while len(queue) > 0:
-        pos = queue.pop()
+        pos = queue.popleft()
 
         for next in graph[pos]:
             if dist[next] != -1:

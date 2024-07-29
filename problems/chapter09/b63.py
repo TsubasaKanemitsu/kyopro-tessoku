@@ -12,7 +12,7 @@ def bfs(sx: int, sy:int) -> List[list]:
     dist[sy][sx] = 0
 
     while len(queue) > 0:
-        x, y = queue.pop()
+        x, y = queue.popleft()
         # 下、右、上、左
         pos = [[1, 0], [0, 1], [-1, 0], [0, -1]]
         for dy, dx in pos:
